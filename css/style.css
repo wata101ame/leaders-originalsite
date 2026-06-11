@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+/*============
+.toggle_btn
+=============*/
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 3;
+}
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+
+/*============
+.top
+=============*/
+.top {
+  position: relative; /* 子要素を絶対配置するために必要です */
+  background-image: url("/img/FV-poetryworld.1440.png");
+  background-size: cover;
+  background-position: top;
+  width: 100vw;
+  height: 50vw;
+}
+
+.top h1 {
+  /* ネストされたh1セレクタを修正しました */
+  text-align: center;
+  /* vertical-align: bottom; はインライン要素に適用されるプロパティであり、ブロック要素であるh1には効果がありません */
+}
+
+.top .FV-poem {
+  /* ネストされた.FV-poemセレクタを修正しました */
+  position: absolute; /* ブロックを独立して配置します */
+  right: 100px; /* .topコンテナの右端からどのくらいの位置にあるかを示します */
+  top: 0; /* .topコンテナの上端に揃えます */
+  bottom: 0; /* .topコンテナの全高にわたって表示されるようにします */
+  writing-mode: vertical-rl;
+}
