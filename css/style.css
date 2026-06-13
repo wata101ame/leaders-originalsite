@@ -1,119 +1,171 @@
+:root {
+  --navy: #001343;
+  --frame: #d2d3d5;
+  --outline: #aeafb1;
+  --void: #060708;
+  --ink: #151515;
+  --muted: #555555;
+  --page-bg: #f8f8f7;
+  --window-scale: 1;
+  --zoom-progress: 0;
+  --bg-progress: 0;
+  --fade-progress: 0;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
-ul,
-ol {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-img {
-  vertical-align: bottom;
-  max-width: 100%;
-}
-/*============
-.toggle_btn
-=============*/
-.toggle_btn {
-  display: block;
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  width: 30px;
-  height: 30px;
-  transition: all 0.5s;
-  cursor: pointer;
-  z-index: 3;
-}
-.toggle_btn span {
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 30px;
-  height: 2px;
-  background-color: #333;
-  border-radius: 4px;
-  transition: all 0.5s;
-}
-.toggle_btn span:nth-child(1) {
-  top: 4px;
-}
-.toggle_btn span:nth-child(2) {
-  top: 14px;
-}
-.toggle_btn span:nth-child(3) {
-  bottom: 4px;
-}
-.open .toggle_btn span {
-  background-color: #fff;
-}
-.open .toggle_btn span:nth-child(1) {
-  -webkit-transform: translateY(10px) rotate(-315deg);
-  transform: translateY(10px) rotate(-315deg);
-}
-.open .toggle_btn span:nth-child(2) {
-  opacity: 0;
-}
-.open .toggle_btn span:nth-child(3) {
-  -webkit-transform: translateY(-10px) rotate(315deg);
-  transform: translateY(-10px) rotate(315deg);
+
+html {
+  scroll-behavior: smooth;
 }
 
-/*============
-.hero
-=============*/
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+  background: color-mix(
+    in srgb,
+    var(--page-bg),
+    var(--navy) calc(var(--bg-progress) * 100%)
+  );
+  font-family:
+    "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", "Noto Serif JP", serif;
+}
+
+button {
+  font: inherit;
+}
+
+.site-header {
+  position: fixed;
+  top: clamp(18px, 2.2vw, 32px);
+  right: clamp(18px, 3vw, 42px);
+  z-index: 20;
+  opacity: calc(1 - var(--fade-progress));
+}
+
+.menu-button {
+  display: grid;
+  gap: 8px;
+  width: 44px;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+  height: 2px;
+  background: var(--ink);
+}
 
 .hero {
+  height: 180vh;
+  min-height: 1200px;
+}
+
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-height: 640px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-sticky::after {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background: var(--navy);
+  opacity: clamp(0, calc((var(--zoom-progress) - 0.86) * 7), 1);
+  content: "";
+}
+
+.tree {
   position: absolute;
   top: 0;
-  left: 0;
+  opacity: calc(1 - clamp(0, calc(var(--fade-progress) * 1.5), 1));
+}
+
+.tree img {
+  width: 550px;
+}
+.window-stage {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  z-index: 5;
+  width: clamp(200px, 25vw, 300px);
+  aspect-ratio: 0.78;
+  transform: translate(-50%, -50%) scale(var(--window-scale));
+  transform-origin: 50% 64%;
+  will-change: transform;
+}
+
+.window-outline {
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--outline);
+  border-bottom-width: 2px;
+  background: #ffffff;
+  border-radius: 50% 50% 0 0 / 31% 31% 0 0;
+  opacity: calc(1 - clamp(0, calc((var(--zoom-progress) - 0.68) * 3), 1));
+}
+
+.window-frame {
+  position: absolute;
+  inset: 5.5% 7.5% 4.5%;
+  padding: clamp(14px, 1.7vw, 26px);
+  background: var(--frame);
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+}
+
+.window-core {
   width: 100%;
   height: 100%;
-  background-image: url("/img/FV-poetryworld.1440.png ");
-  background-color: #001343;
-  background-size: cover;
-  background-position: top;
-  z-index: -1;
-  /* スクロール進捗（--fade-progress）に合わせて拡大(1倍→2.5倍)と透過(1→0)を行う */
-  transform: scale(calc(1 + var(--fade-progress, 0) * 1.5));
-  opacity: calc(1 - var(--fade-progress, 0));
-  pointer-events: none;
+  background: #001343;
+  border-radius: 50% 50% 0 0 / 29% 29% 0 0;
 }
 
-.FV-poem {
-  /* ネストされた.FV-poemセレクタを修正しました */
-  position: absolute; /* ブロックを独立して配置します */
-  right: 12vw; /* 画面幅に合わせて右からの位置を調整 */
-  top: 35vh; /* 画面幅に合わせて上からの位置を調整 */
-  bottom: 0; /* .heroコンテナの全高にわたって表示されるようにします */
-  writing-mode: vertical-rl;
-  font-size: 1vw; /* 画面幅に合わせて文字サイズを調整 */
-  letter-spacing: 0.75em;
-  line-height: 1.5em; /* 画面幅に合わせて行の高さを調整 */
-}
-
-/* コピーライト/メインタイトル */
-.title {
+.hero-copy {
   position: absolute;
-  left: 10vw;
-  top: 70vh;
-  bottom: 0;
+  left: clamp(20px, 5vw, 170px);
+  bottom: 10vw;
+  z-index: 6;
+  display: grid;
+  gap: 16px;
+  margin: 0;
   color: rgba(30, 30, 30, 0.72);
-  font-size: 2vw;
+  font-size: clamp(1.35rem, 2.2vw, 2.25rem);
   font-weight: 400;
-  letter-spacing: 0.05em;
-  line-height: 1.5em;
+  letter-spacing: 0;
+  line-height: 1.3;
+  opacity: calc(1 - clamp(0, calc(var(--fade-progress) * 1.5), 1));
 }
 
-/* スクロール案内 */
+.vertical-poem {
+  position: absolute;
+  top: 10vw;
+  right: 10vw;
+  z-index: 6;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.82);
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 2.4;
+  opacity: calc(1 - clamp(0, calc(var(--fade-progress) * 1.8), 1));
+  writing-mode: vertical-rl;
+}
+
 .scroll-guide {
   position: absolute;
-  top: 75vh;
   right: 0;
+  bottom: clamp(112px, 16vh, 154px);
   left: 0;
   z-index: 6;
   display: grid;
@@ -124,22 +176,21 @@ img {
 }
 
 .scroll-guide strong {
-  font-size: 1vw;
-  line-height: 1vw;
-  letter-spacing: 0.1em;
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  line-height: 1;
 }
 
 .scroll-guide span {
   color: var(--muted);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.9vw;
+  font-size: 0.9rem;
 }
 
 .scroll-guide i,
 .scroll-guide i::before {
   display: block;
-  width: 1vw;
-  height: 1vw;
+  width: 18px;
+  height: 18px;
   border-right: 2px solid rgba(0, 0, 0, 0.42);
   border-bottom: 2px solid rgba(0, 0, 0, 0.42);
   transform: rotate(45deg);
@@ -159,41 +210,83 @@ img {
   position: relative;
   top: -10px;
   left: -10px;
-  position: absolute;
-  top: -6px;
-  left: -6px;
 }
-/* アニメーション */
+
+.tile-floor {
+  position: absolute;
+  bottom: 0;
+  opacity: calc(1 - clamp(0, calc(var(--fade-progress) * 1.5), 1));
+}
+
+.tile-floor img {
+  width: 100%;
+}
+
+.concept {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 80px;
+  color: #f5f7fb;
+  background: var(--navy);
+  text-align: center;
+}
+.concept-text {
+  padding-top: 30px;
+  bottom: 0;
+}
+
+.sky-poem img {
+}
+
 @keyframes floatArrow {
   0%,
   100% {
-    transform: translateY(0);
-    transform: translateY(0) rotate(45deg);
+    translate: 0 0;
   }
 
   50% {
-    transform: translateY(8px);
-    transform: translateY(8px) rotate(45deg);
+    translate: 0 8px;
   }
 }
 
-/* レスポンシブ調整 */
 @media (max-width: 860px) {
   .hero-sticky {
     min-height: 580px;
   }
 
   .window-stage {
-    top: 42%;
-    width: clamp(180px, 46vw, 260px);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+    top: 40%;
+    width: clamp(180px, 50vw, 235px);
   }
 
-  .scroll-guide i {
-    animation: none;
+  .hero-copy {
+    left: 24px;
+    right: 24px;
+    bottom: 118px;
+    gap: 10px;
+    font-size: clamp(1.2rem, 5vw, 1.65rem);
+  }
+
+  .scroll-guide {
+    bottom: clamp(104px, 15vh, 132px);
+  }
+
+  .vertical-poem {
+    position: absolute;
+    top: 30vw;
+    right: 5vw;
+    font-size: 0.78rem;
+    line-height: 2.1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .scroll-guide i {
+      animation: none;
+    }
   }
 }

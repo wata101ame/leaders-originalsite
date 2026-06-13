@@ -1,52 +1,90 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>詩と癒しの世界</title>
-
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="header-inner">
-        <div class="toggle_btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div id="mask"></div>
-      </div>
+    <header class="site-header" aria-label="サイトメニュー">
+      <button class="menu-button" type="button" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
 
-    <section class="hero">
-      <div class="FV-poem">
-        <p>人間だけが</p>
-        <p>　　息つくひまなく動きまわり</p>
-        <br />
-        <p>　　　　忙しさとひきかえに</p>
-        <p>　　　　大切なものをぽとぽとと</p>
-        <br />
-        <p>　　　　　　　　　　落としてゆきます</p>
-      </div>
-      <div class="title">
-        <p>
-          ほっとひといき。
-          <br />
-          詩とともに心に癒しを
-        </p>
-      </div>
-      <!-- スクロールガイド -->
-      <div class="scroll-guide" aria-hidden="true">
-        <strong>詩と癒しの世界</strong>
-        <span>scroll</span>
-        <i></i>
-      </div>
+    <main>
+      <section class="hero" aria-label="はじめ">
+        <div class="hero-sticky">
+          <div class="tree">
+            <img src="/img/tree-branch.jpg" />
+          </div>
+          <div class="vertical-poem">
+            <p>
+              人間だけが<br />
+              　　息つくひまなく動きまわり
+            </p>
+            <p>
+              　　　　　忙しさとひきかえに<br />
+              　　　　　大切なものをぽとぽとと
+            </p>
+            <p>　　　　　　　　　　　落してゆきます</p>
+          </div>
+          <div class="window-stage" aria-hidden="true">
+            <div class="window-outline">
+              <div class="window-frame">
+                <div class="window-core"></div>
+              </div>
+            </div>
+          </div>
 
-      <section class="concept">
-        <h1>毎日忙しいあなたへ <br />日常に少しのゆとりを</h1>
+          <h1 class="hero-copy">
+            <span>ほっとひといき。</span>
+            <span>詩とともに心に癒しを</span>
+          </h1>
+
+          <div class="scroll-guide" aria-hidden="true">
+            <strong>詩と癒しの世界</strong>
+            <span>scroll</span>
+            <i></i>
+          </div>
+
+          <div class="tile-floor">
+            <img src="/img/tile-floor.png" />
+          </div>
+        </div>
       </section>
+    </main>
+    <section class="concept" aria-label="概要">
+      <div class="concept-title">
+        <h1>毎日忙しいあなたへ <br />日常に少しのゆとりを</h1>
+        <div class="concept-explain">
+          <p>毎日多くの仕事に追われ<br />頑張り続けるあなたへ。</p>
+          <p>
+            時には忙しない日常から離れて<br />ゆっくりする時間 を持つことは<br />とても大切です。
+          </p>
+          <p>
+            このサイトでは、詩を言葉と<br />視覚で表現しています。
+            <br />
+          </p>
+          <p>
+            詩を読みながら自然を感じて
+            <br />心にゆとりを<br />少しでももっていただけると嬉しいです。
+          </p>
+        </div>
+        <p class="concept-text">
+          絵を選ぶと、その景色にまつわる詩を<br />
+          いくつか読むことができます
+        </p>
+        <div class="water-poem"></div>
+        <div class="seazon-poem"></div>
+        <div class="plants-poem"></div>
+        <div class="sky-poem"></div>
+        <img src="/img/sky-window.png" />
+      </div>
     </section>
+    <script src="/js/main.js"></script>
   </body>
 </html>
