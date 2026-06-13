@@ -64,28 +64,136 @@ img {
 }
 
 /*============
-.top
+.hero
 =============*/
-.top {
-  position: relative; /* 子要素を絶対配置するために必要です */
-  background-image: url("/img/FV-poetryworld.1440.png");
+
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/FV-poetryworld.1440.png ");
+  background-color: #001343;
   background-size: cover;
   background-position: top;
-  width: 100vw;
-  height: 50vw;
+  z-index: -1;
+  /* スクロール進捗（--fade-progress）に合わせて拡大(1倍→2.5倍)と透過(1→0)を行う */
+  transform: scale(calc(1 + var(--fade-progress, 0) * 1.5));
+  opacity: calc(1 - var(--fade-progress, 0));
+  pointer-events: none;
 }
 
-.top h1 {
-  /* ネストされたh1セレクタを修正しました */
-  text-align: center;
-  /* vertical-align: bottom; はインライン要素に適用されるプロパティであり、ブロック要素であるh1には効果がありません */
-}
-
-.top .FV-poem {
+.FV-poem {
   /* ネストされた.FV-poemセレクタを修正しました */
   position: absolute; /* ブロックを独立して配置します */
-  right: 100px; /* .topコンテナの右端からどのくらいの位置にあるかを示します */
-  top: 0; /* .topコンテナの上端に揃えます */
-  bottom: 0; /* .topコンテナの全高にわたって表示されるようにします */
+  right: 12vw; /* 画面幅に合わせて右からの位置を調整 */
+  top: 35vh; /* 画面幅に合わせて上からの位置を調整 */
+  bottom: 0; /* .heroコンテナの全高にわたって表示されるようにします */
   writing-mode: vertical-rl;
+  font-size: 1vw; /* 画面幅に合わせて文字サイズを調整 */
+  letter-spacing: 0.75em;
+  line-height: 1.5em; /* 画面幅に合わせて行の高さを調整 */
+}
+
+/* コピーライト/メインタイトル */
+.title {
+  position: absolute;
+  left: 10vw;
+  top: 70vh;
+  bottom: 0;
+  color: rgba(30, 30, 30, 0.72);
+  font-size: 2vw;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.5em;
+}
+
+/* スクロール案内 */
+.scroll-guide {
+  position: absolute;
+  top: 75vh;
+  right: 0;
+  left: 0;
+  z-index: 6;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  color: var(--ink);
+  opacity: calc(1 - clamp(0, calc(var(--fade-progress) * 2), 1));
+}
+
+.scroll-guide strong {
+  font-size: 1vw;
+  line-height: 1vw;
+  letter-spacing: 0.1em;
+}
+
+.scroll-guide span {
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9vw;
+}
+
+.scroll-guide i,
+.scroll-guide i::before {
+  display: block;
+  width: 1vw;
+  height: 1vw;
+  border-right: 2px solid rgba(0, 0, 0, 0.42);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.42);
+  transform: rotate(45deg);
+  content: "";
+}
+
+.scroll-guide i::before {
+  transform: rotate(0deg);
+}
+
+.scroll-guide i {
+  margin-top: 2px;
+  animation: floatArrow 1.6s ease-in-out infinite;
+}
+
+.scroll-guide i::before {
+  position: relative;
+  top: -10px;
+  left: -10px;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+}
+/* アニメーション */
+@keyframes floatArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+    transform: translateY(0) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(8px);
+    transform: translateY(8px) rotate(45deg);
+  }
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 860px) {
+  .hero-sticky {
+    min-height: 580px;
+  }
+
+  .window-stage {
+    top: 42%;
+    width: clamp(180px, 46vw, 260px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .scroll-guide i {
+    animation: none;
+  }
 }
