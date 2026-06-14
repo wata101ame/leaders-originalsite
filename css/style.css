@@ -5,7 +5,7 @@
   --void: #060708;
   --ink: #151515;
   --muted: #555555;
-  --page-bg: #f8f8f7;
+  --page-bg: #fcfcfc;
   --window-scale: 1;
   --zoom-progress: 0;
   --bg-progress: 0;
@@ -219,11 +219,12 @@ button {
 }
 
 .tile-floor img {
-  width: 100%;
+  width: cover;
 }
 
 .concept {
   /* min-height: -20vh; */
+  height: 440px;
   display: grid;
   place-items: center;
   padding: 80px;
@@ -241,26 +242,58 @@ button {
 
 .concept-text {
   position: absolute;
-  top: -10vh;
+  top: 0vh;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .sky-poem {
   position: absolute;
-  top: -10vw;
-  left: 0vw;
-}
-.water-poem {
-  position: absolute;
-  top: -10vw;
-  left: 0vw;
-}
-.sky-poem img {
-  position: absolute;
-  top: 0;
+  top: 3vw;
+  left: 5vw;
 }
 
+.water-poem {
+  position: absolute;
+  top: 8vw;
+  right: 5vw;
+}
+
+.season-poem {
+  position: absolute;
+  top: -20vw;
+  left: 0vw;
+}
+
+.plants-poem {
+  position: absolute;
+  top: -21vw;
+  right: 0vw;
+}
+
+.window-shape1 {
+  position: absolute;
+  top: -7vw;
+  left: 12vw;
+}
+
+.window-shape2 {
+  position: absolute;
+  top: 1vw;
+  right: 21vw;
+}
+
+.window-shape1 img {
+  position: absolute;
+  top: 0;
+  height: 150px;
+}
+
+.window-shape2 img {
+  position: absolute;
+  top: 0;
+  height: 130px;
+}
 .poem-name {
   display: none;
 }
@@ -268,13 +301,15 @@ button {
 .sky-poem-link {
   display: inline-block;
   position: relative;
-  width: 250px;
-  height: 400px;
+  width: 200px;
+  height: 250px;
 }
 
 .sky-poem-link img {
   position: absolute;
+  top: 0;
   left: 0;
+  height: 300px;
   transition: 0.3s ease;
 }
 
@@ -298,6 +333,168 @@ button {
     filter: brightness(110%);
     transition: 0.3s ease;
   }
+}
+
+.season-poem-link {
+  display: inline-block;
+  position: relative;
+  width: 240px;
+  height: 200px;
+}
+
+.season-poem-link img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 225px;
+  transition: 0.3s ease;
+}
+
+.season-poem-link p {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  transition: 0.3s ease;
+}
+
+.season-poem-link:hover {
+  .poem-name {
+    display: block;
+    transition: 0.3s ease;
+  }
+
+  .poem-image {
+    filter: brightness(105%);
+    transition: 0.3s ease;
+  }
+}
+
+.plants-poem-link {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 250px;
+}
+
+.plants-poem-link img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300px;
+  transition: 0.3s ease;
+}
+
+.plants-poem-link p {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  display: none;
+  transition: 0.3s ease;
+}
+
+.plants-poem-link:hover {
+  .poem-name {
+    display: block;
+    transition: 0.3s ease;
+  }
+
+  .poem-image {
+    filter: brightness(110%);
+    transition: 0.3s ease;
+  }
+}
+
+.water-poem-link {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.water-poem-link img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 240px;
+  transition: 0.3s ease;
+}
+
+.water-poem-link p {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  display: none;
+  transition: 0.3s ease;
+}
+
+.water-poem-link:hover {
+  .poem-name {
+    display: block;
+    transition: 0.3s ease;
+  }
+
+  .poem-image {
+    filter: brightness(110%);
+    transition: 0.3s ease;
+  }
+}
+
+.site-footer {
+  background-color: #000000;
+  color: #f5f7fb;
+  position: relative;
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  height: 300px;
+  writing-mode: vertical-rl;
+  display: flex;
+}
+
+.footer-text {
+  display: inline-block;
+  flex-direction: row-reverse;
+  position: relative;
+  letter-spacing: 0.7em;
+}
+
+.main-link {
+  display: inline-block;
+  position: absolute;
+  top: 35px;
+  right: 120px;
+  line-height: 8em;
+  letter-spacing: 0.5em;
+}
+
+.poemsite-link {
+  display: inline-block;
+  position: absolute;
+  top: 100px;
+  right: 400px;
+  line-height: 5em;
+  letter-spacing: 0.5em;
+}
+
+.site-link {
+  color: #f5f7fb;
+  text-decoration: none;
+}
+
+.copy-light {
+  writing-mode: horizontal-tb;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 @keyframes floatArrow {
