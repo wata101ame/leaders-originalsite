@@ -7,25 +7,35 @@
     <link rel="stylesheet" href="/css/water.css" />
   </head>
   <body>
-    <section class="umi-poem">
-      <div class="umi-text">
-        <p class="umi-paragraph-1">
-          少年が沖にむかって呼んだ<br />「おーい」<br />
-          まわりの子どもたちも<br />
-          つぎつぎに呼んだ <br />「おーい」「おーい」
-          <br />そして　おとなも<br />
-          「おーい」と呼んだ<br />
-        </p>
-        <p class="umi-paragraph-2">
-          子どもたちは　それだけで <br />とてもたのしそうだった <br />
-          けれど　おとなは<br />
-          いつまでもじっと待っていた<br />
-          海が　何かをこたえてくれるかのように
-        </p>
+    <section class="m-0 p-0 h-full overflow-hidden">
+      <div id="wave-container">
+        <!-- メインCanvas (背景の波アニメーション) -->
+        <canvas
+          id="waveCanvas"
+          class="absolute inset-0 w-full h-full z-0"
+        ></canvas>
       </div>
-      <div class="poem-title">
-        <h4>海　　　　　　　　　　高田敏子</h4>
+      <div class="umi-poem">
+        <div class="umi-text">
+          <p class="umi-paragraph-1">
+            少年が沖にむかって呼んだ<br />「おーい」<br />
+            まわりの子どもたちも<br />
+            つぎつぎに呼んだ <br />「おーい」「おーい」
+            <br />そして　おとなも<br />
+            「おーい」と呼んだ<br />
+          </p>
+          <p class="umi-paragraph-2">
+            子どもたちは　それだけで <br />とてもたのしそうだった <br />
+            けれど　おとなは<br />
+            いつまでもじっと待っていた<br />
+            海が　何かをこたえてくれるかのように
+          </p>
+        </div>
+        <div class="poem-title">
+          <h4>海　　　　　　　　　　高田敏子</h4>
+        </div>
       </div>
+      <script src="/js/umi.js"></script>
     </section>
 
     <section class="uta-poem">

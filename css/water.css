@@ -10,15 +10,33 @@ html {
 
 .umi-poem {
   writing-mode: vertical-rl;
-  background-color: rgb(255, 241, 224);
+  overflow: hidden;
   padding: 100px;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   position: relative;
+  letter-spacing: 0.25rem;
+  p {
+    color: aliceblue;
+  }
 }
+
+#wave-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  user-select: none;
+}
+
 .umi-text {
-  line-height: 2;
+  position: relative;
+  z-index: 2;
+  line-height: 3;
   flex-direction: row-reverse;
 }
 
@@ -27,26 +45,28 @@ html {
 }
 
 .umi-paragraph-2 {
-  padding-right: 50px;
+  padding-right: 60px;
 }
 
 .uta-poem {
   writing-mode: vertical-rl;
-  position: relative;
   padding: 100px;
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
   display: flex;
   position: relative;
+  letter-spacing: 0.25rem;
 }
 
 .uta-text {
-  line-height: 2;
+  line-height: 1.5;
   flex-direction: row-reverse;
 }
 
-.uta-1,
+.uta-1 {
+  padding-right: 90px;
+}
 .uta-2,
 .uta-3,
 .uta-4,
@@ -54,7 +74,7 @@ html {
 .uta-6,
 .uta-7,
 .uta-8 {
-  padding-right: 50px;
+  padding-right: 40px;
 }
 
 .june-poem {
@@ -66,6 +86,7 @@ html {
   height: 100vh;
   display: flex;
   position: relative;
+  letter-spacing: 0.25rem;
 }
 
 .june-text {
@@ -110,4 +131,5 @@ html {
   position: absolute;
   left: 100px;
   bottom: 50px;
+  z-index: 2;
 }
