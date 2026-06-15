@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.umi-poem {
+  writing-mode: vertical-rl;
+  background-color: rgb(255, 241, 224);
+  padding: 100px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+.umi-text {
+  line-height: 2;
+  flex-direction: row-reverse;
+}
+
+.umi-paragraph-1 {
+  padding-right: 80px;
+}
+
+.umi-paragraph-2 {
+  padding-right: 50px;
+}
+
+.uta-poem {
+  writing-mode: vertical-rl;
+  position: relative;
+  padding: 100px;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.uta-text {
+  line-height: 2;
+  flex-direction: row-reverse;
+}
+
+.uta-1,
+.uta-2,
+.uta-3,
+.uta-4,
+.uta-5,
+.uta-6,
+.uta-7,
+.uta-8 {
+  padding-right: 50px;
+}
+
+.june-poem {
+  writing-mode: vertical-rl;
+  position: relative;
+  padding: 100px;
+  background-color: rgb(178, 189, 192);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.june-text {
+  line-height: 2;
+  flex-direction: row-reverse;
+}
+
+.june-1,
+.june-2,
+.june-3,
+.june-4 {
+  padding-right: 50px;
+}
+
+.ame-poem {
+  writing-mode: vertical-rl;
+  position: relative;
+  padding: 100px;
+  background-color: #001343;
+  color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.ame-text {
+  line-height: 2;
+  flex-direction: row-reverse;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, 0%);
+}
+
+.ame-1,
+.ame-2,
+.ame-3 {
+  padding-right: 50px;
+}
+
+.poem-title {
+  position: absolute;
+  left: 100px;
+  bottom: 50px;
+}

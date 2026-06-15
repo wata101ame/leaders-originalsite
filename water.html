@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <title>水の詩</title>
+    <link rel="stylesheet" href="/css/water.css" />
   </head>
   <body>
     <section class="umi-poem">
-      <div class="poem-text">
-        <p>
+      <div class="umi-text">
+        <p class="umi-paragraph-1">
           少年が沖にむかって呼んだ<br />「おーい」<br />
           まわりの子どもたちも<br />
           つぎつぎに呼んだ <br />「おーい」「おーい」
           <br />そして　おとなも<br />
           「おーい」と呼んだ<br />
         </p>
-        <p>
+        <p class="umi-paragraph-2">
           子どもたちは　それだけで <br />とてもたのしそうだった <br />
           けれど　おとなは<br />
           いつまでもじっと待っていた<br />
@@ -24,8 +24,113 @@
         </p>
       </div>
       <div class="poem-title">
-        <h5>海　　　高田敏子</h5>
+        <h4>海　　　　　　　　　　高田敏子</h4>
       </div>
+    </section>
+
+    <section class="uta-poem">
+      <div class="uta-text">
+        <p class="uta-1">
+          水は　うたいます <br />
+          川を　はしりながら
+        </p>
+        <p class="uta-2">
+          海になる日の　びょうびょうを<br />
+          海だった日の　びょうびょうを
+        </p>
+        <p class="uta-3">
+          雲になる日の　ゆうゆうを <br />雲だった日の　ゆうゆうを
+        </p>
+        <p class="uta-4">
+          雨になる日の　ざんざかを<br />
+          雨だった日の　ざんざかを
+        </p>
+        <p class="uta-5">
+          虹になる日の　やっほーを<br />
+          虹だった日の　やっほーを
+        </p>
+        <p class="uta-6">
+          雪や氷になる日の　こんこんこんこんを<br />
+          雪や氷だった日の　こんこんこんこんを<br />
+        </p>
+        <p class="uta-7">
+          水は　うたいます<br />
+          川を　はしりながら
+        </p>
+        <p class="uta-8">
+          川であるいまの　どんどこを <br />水である自分の　えいえんを
+        </p>
+      </div>
+      <div class="poem-title">
+        <h4>水はうたいます　　まど・みちお</h4>
+      </div>
+    </section>
+
+    <section class="june-poem">
+      <div class="june-text">
+        <p class="june-1">
+          またひとしきり　午前の雨が<br />
+          菖蒲のいろの　みどりいろ<br />
+          眼うるめる　面長き女<br />
+          たちあらはれて　消えてゆく
+        </p>
+        <p class="june-2">
+          たちあらはれて　消えゆけば<br />
+          うれひに沈み　しとしとと<br />
+          畠の上に　落ちてゐる<br />
+          はてしもしれず　落ちてゐる
+        </p>
+        <p class="june-3">
+          お太鼓叩いて　笛吹いて<br />
+          あどけない子が　日曜日<br />
+          畳の上で　遊びます<br />
+        </p>
+        <p class="june-4">
+          お太鼓叩いて　笛吹いて<br />
+          遊んでゐれば　雨が降る<br />
+          櫺子の外に　雨が降る
+        </p>
+      </div>
+      <div class="poem-title">
+        <h4>六月の雨　　　　　中原中也</h4>
+      </div>
+    </section>
+    　
+
+    <section class="ame-poem">
+      <div class="ame-text">
+        <p class="ame-1">雨のおとが　きこえる<br />雨がふっていたのだ</p>
+        <p class="ame-2">
+          あのおとのように<br />そっと世のためにはたらいていよう
+        </p>
+        <p class="ame-3">雨があがるように<br />しずかに死んでゆこう</p>
+      </div>
+      <div class="poem-title">
+        <h4>雨　　　　　　　　八木重吉</h4>
+      </div>
+      <!-- bodyの代わりにdivタグを使用 -->
+      <div id="app-container" class="text-white select-none">
+        <!-- メインCanvas (Canvas 2D) - IDをame-canvasに変更 -->
+        <canvas id="ame-canvas"></canvas>
+
+        <!-- UIオーバーレイ -->
+        <div
+          class="absolute inset-0 pointer-events-none z-10 flex flex-col justify-between p-6 md:p-8"
+        >
+          <!-- 中央のメッセージ（操作ガイド） -->
+          <div
+            id="hint-text"
+            class="text-center transition-opacity duration-1000 ease-out py-4"
+          >
+            <p
+              class="text-sm md:text-base text-cyan-300/40 font-light tracking-widest animate-pulse"
+            >
+              画面をクリックまたはドラッグして、美しい線画の波紋を描いてください
+            </p>
+          </div>
+        </div>
+      </div>
+      <script src="/js/ame.js"></script>
     </section>
   </body>
 </html>
