@@ -250,11 +250,28 @@ button {
 
 .concept-text {
   position: absolute;
-  top: 1vh;
+  top: 20svh;
   left: 50%;
   transform: translate(-50%, -50%);
   letter-spacing: 0.1em;
   line-height: 2;
+  h1 {
+    font-size: 24px;
+  }
+}
+
+.concept-explain {
+  margin-top: 30px;
+  p {
+    padding: 0.25rem;
+  }
+}
+
+.concept-info {
+  margin-top: 30px;
+  p {
+    padding: 0.5rem;
+  }
 }
 
 .sky-poem {

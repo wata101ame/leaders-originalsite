@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.tulip-poem {
+  width: 100vw;
+  height: 100vh;
+  padding: 10vw;
+  writing-mode: vertical-rl;
+  position: relative;
+  letter-spacing: 0.25rem;
+  line-height: 2;
+  background-color: #b6e081;
+}
+
+.tulip-text {
+  position: absolute;
+  right: 30vw;
+}
+
+.tree-poem {
+  width: 100vw;
+  height: 100vh;
+  padding: 10vw;
+  writing-mode: vertical-rl;
+  position: relative;
+  letter-spacing: 0.25rem;
+  line-height: 2;
+  background: linear-gradient(#b6e081, #ffffff);
+}
+
+.tree-1 {
+  position: absolute;
+  top: 60%;
+  right: 20vw;
+}
+
+.tree-2 {
+  position: absolute;
+  right: 70vw;
+}
+
+.suisen-poem {
+  width: 100vw;
+  height: 100vh;
+  padding: 10vw;
+  writing-mode: vertical-rl;
+  position: relative;
+  letter-spacing: 0.25rem;
+  line-height: 2;
+  background: linear-gradient(#ffffff, #ecf7ad);
+}
+
+.suisen-1,
+.suisen-2,
+.suisen-3,
+.suisen-4,
+.suisen-5 {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.poem-title {
+  position: absolute;
+  left: 100px;
+  bottom: 50px;
+}

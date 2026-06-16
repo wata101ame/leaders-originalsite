@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.clouds-poem {
+  width: 100vw;
+  height: 100vh;
+  padding: 10vw;
+  writing-mode: vertical-rl;
+  position: relative;
+  letter-spacing: 0.25rem;
+}
+
+.clouds-text {
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, 0%);
+}
+
+.clouds-1,
+.clouds-2,
+.clouds-3 {
+  margin-right: 50px;
+  margin-left: 50px;
+  line-height: 2;
+}
+
+.sun-poem {
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+  writing-mode: vertical-rl;
+  position: relative;
+  letter-spacing: 0.25rem;
+}
+
+.sun-text {
+  position: relative;
+}
+
+.sun-1 {
+  margin-right: 50px;
+  margin-left: 50px;
+  line-height: 2;
+}
+.sun-2 {
+  margin-right: 50px;
+  margin-left: 50px;
+  line-height: 2;
+  position: absolute;
+  right: 40vw;
+}
+
+.sun-3 {
+  margin-right: 50px;
+  margin-left: 50px;
+  line-height: 2;
+  position: absolute;
+  right: 55vw;
+}
+
+.moon-poem {
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+  writing-mode: vertical-rl;
+  position: relative;
+  letter-spacing: 0.25rem;
+}
+
+.moon-text {
+  position: absolute;
+  right: 20%;
+}
+
+.moon-1 {
+  margin-right: 50px;
+  margin-left: 70px;
+  line-height: 2;
+}
+.moon-2 {
+  margin-right: 70px;
+  margin-left: 70px;
+  line-height: 2;
+}
+.moon-3 {
+  margin-right: 70px;
+  margin-left: 70px;
+  line-height: 2;
+}
+
+.poem-title {
+  position: absolute;
+  left: 100px;
+  bottom: 50px;
+}
