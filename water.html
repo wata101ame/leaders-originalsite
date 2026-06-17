@@ -7,73 +7,78 @@
     <link rel="stylesheet" href="/css/water.css" />
   </head>
   <body>
-    <section class="m-0 p-0 h-full overflow-hidden">
+    <section class="umi-poem">
       <div id="wave-container">
         <!-- メインCanvas (背景の波アニメーション) -->
-        <canvas
-          id="waveCanvas"
-          class="absolute inset-0 w-full h-full z-0"
-        ></canvas>
+        <canvas id="waveCanvas"></canvas>
       </div>
-      <div class="umi-poem">
-        <div class="umi-text">
-          <p class="umi-paragraph-1">
-            少年が沖にむかって呼んだ<br />「おーい」<br />
-            まわりの子どもたちも<br />
-            つぎつぎに呼んだ <br />「おーい」「おーい」
-            <br />そして　おとなも<br />
-            「おーい」と呼んだ<br />
-          </p>
-          <p class="umi-paragraph-2">
-            子どもたちは　それだけで <br />とてもたのしそうだった <br />
-            けれど　おとなは<br />
-            いつまでもじっと待っていた<br />
-            海が　何かをこたえてくれるかのように
-          </p>
-        </div>
-        <div class="poem-title">
-          <h4>海　　　　　　　　　　高田敏子</h4>
-        </div>
+
+      <div class="umi-text">
+        <p class="umi-paragraph-1">
+          少年が沖にむかって呼んだ<br />「おーい」<br />
+          まわりの子どもたちも<br />
+          つぎつぎに呼んだ <br />「おーい」「おーい」
+          <br />そして　おとなも<br />
+          「おーい」と呼んだ<br />
+        </p>
+        <p class="umi-paragraph-2">
+          子どもたちは　それだけで <br />とてもたのしそうだった <br />
+          けれど　おとなは<br />
+          いつまでもじっと待っていた<br />
+          海が　何かをこたえてくれるかのように
+        </p>
       </div>
+      <div class="poem-title">
+        <h4>海　　　　　　　　　　高田敏子</h4>
+      </div>
+
       <script src="/js/umi.js"></script>
     </section>
 
     <section class="uta-poem">
-      <div class="uta-text">
-        <p class="uta-1">
-          水は　うたいます <br />
-          川を　はしりながら
-        </p>
-        <p class="uta-2">
-          海になる日の　びょうびょうを<br />
-          海だった日の　びょうびょうを
-        </p>
-        <p class="uta-3">
-          雲になる日の　ゆうゆうを <br />雲だった日の　ゆうゆうを
-        </p>
-        <p class="uta-4">
-          雨になる日の　ざんざかを<br />
-          雨だった日の　ざんざかを
-        </p>
-        <p class="uta-5">
-          虹になる日の　やっほーを<br />
-          虹だった日の　やっほーを
-        </p>
-        <p class="uta-6">
-          雪や氷になる日の　こんこんこんこんを<br />
-          雪や氷だった日の　こんこんこんこんを<br />
-        </p>
-        <p class="uta-7">
-          水は　うたいます<br />
-          川を　はしりながら
-        </p>
-        <p class="uta-8">
-          川であるいまの　どんどこを <br />水である自分の　えいえんを
-        </p>
+      <!-- Canvasタグを使用した高効率な描画構成 -->
+      <div class="container">
+        <canvas id="fluidCanvas"></canvas>
+
+        <!-- 提供された詩の構造 -->
+
+        <div class="uta-text">
+          <p class="uta-1">
+            水は　うたいます <br />
+            川を　はしりながら
+          </p>
+          <p class="uta-2">
+            海になる日の　びょうびょうを<br />
+            海だった日の　びょうびょうを
+          </p>
+          <p class="uta-3">
+            雲になる日の　ゆうゆうを <br />雲だった日の　ゆうゆうを
+          </p>
+          <p class="uta-4">
+            雨になる日の　ざんざかを<br />
+            雨だった日の　ざんざかを
+          </p>
+          <p class="uta-5">
+            虹になる日の　やっほーを<br />
+            虹だった日の　やっほーを
+          </p>
+          <p class="uta-6">
+            雪や氷になる日の　こんこんこんこんを<br />
+            雪や氷だった日の　こんこんこんこんを<br />
+          </p>
+          <p class="uta-7">
+            水は　うたいます<br />
+            川を　はしりながら
+          </p>
+          <p class="uta-8">
+            川であるいまの　どんどこを <br />水である自分の　えいえんを
+          </p>
+        </div>
+        <div class="poem-title">
+          <h4>水はうたいます　　まど・みちお</h4>
+        </div>
       </div>
-      <div class="poem-title">
-        <h4>水はうたいます　　まど・みちお</h4>
-      </div>
+      <script src="/js/uta.js"></script>
     </section>
 
     <section class="june-poem">

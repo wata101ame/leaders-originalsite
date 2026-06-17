@@ -11,7 +11,6 @@ html {
 .umi-poem {
   writing-mode: vertical-rl;
   overflow: hidden;
-  padding: 100px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -38,6 +37,7 @@ html {
   z-index: 2;
   line-height: 3;
   flex-direction: row-reverse;
+  padding: 100px;
 }
 
 .umi-paragraph-1 {
@@ -50,18 +50,19 @@ html {
 
 .uta-poem {
   writing-mode: vertical-rl;
-  padding: 100px;
-  background-color: #ffffff;
+
   width: 100vw;
   height: 100vh;
   display: flex;
   position: relative;
   letter-spacing: 0.25rem;
+  z-index: 10;
 }
 
 .uta-text {
   line-height: 1.5;
   flex-direction: row-reverse;
+  padding: 100px;
 }
 
 .uta-1 {
@@ -75,6 +76,30 @@ html {
 .uta-7,
 .uta-8 {
   padding-right: 40px;
+}
+
+/* カスタムスクロールバーを非表示に */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 全画面コンテナ */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* インタラクティブ波エフェクト用キャンバス */
+#fluidCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: block;
 }
 
 .june-poem {
