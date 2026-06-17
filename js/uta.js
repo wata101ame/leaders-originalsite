@@ -69,8 +69,8 @@ Blob.prototype.update = function () {
     this.y = this.baseY + Math.cos(this.angleY) * this.amplitudeY + this.vy;
 
     // マウスから優しく逃げる物理演算の減衰
-    this.vx *= 0.95;
-    this.vy *= 0.95;
+    this.vx *= 1;
+    this.vy *= 1;
 
     if (mouse.x !== null) {
       var dx = mouse.x - this.x;
@@ -121,7 +121,7 @@ function drawBackgroundWaves() {
   // 複数のレイヤーの波を重ねて奥行きを表現
   var waveLayers = [
     {
-      color: "rgba(37, 99, 235, 0.15)", // 濃い青（最背面）
+      color: "#4B7FC2", // 濃い青（最背面）
       offsetY: -50,
       amplitude: 40,
       speed: 1.0,

@@ -2,12 +2,18 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  p {
+    font-family: shippori-mincho-b1, sans-serif;
+  }
+  h3,
+  h4 {
+    font-family: dnp-shuei-shogomincho-std, sans-serif;
+  }
 }
 
 html {
   scroll-behavior: smooth;
 }
-
 .umi-poem {
   writing-mode: vertical-rl;
   overflow: hidden;
@@ -19,6 +25,7 @@ html {
   p {
     color: aliceblue;
   }
+  font-size: 20px;
 }
 
 #wave-container {
@@ -50,19 +57,25 @@ html {
 
 .uta-poem {
   writing-mode: vertical-rl;
-
   width: 100vw;
   height: 100vh;
   display: flex;
   position: relative;
   letter-spacing: 0.25rem;
   z-index: 10;
+  font-size: 20px;
+  .poem-title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 100px;
+  }
 }
 
 .uta-text {
   line-height: 1.5;
-  flex-direction: row-reverse;
   padding: 100px;
+  z-index: 20;
 }
 
 .uta-1 {
@@ -76,11 +89,6 @@ html {
 .uta-7,
 .uta-8 {
   padding-right: 40px;
-}
-
-/* カスタムスクロールバーを非表示に */
-::-webkit-scrollbar {
-  display: none;
 }
 
 /* 全画面コンテナ */
@@ -110,6 +118,15 @@ html {
   height: 100vh;
   position: relative;
   letter-spacing: 0.25rem;
+  font-size: 20px;
+}
+
+#rainCanvas,
+#ame-canvas {
+  display: block; /* inline要素による下部の隙間を解消 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .june-text {
@@ -135,6 +152,7 @@ html {
   width: 100vw;
   height: 100vh;
   position: relative;
+  font-size: 20px;
 }
 
 .ame-text {
@@ -150,6 +168,16 @@ html {
 .ame-2,
 .ame-3 {
   padding-right: 50px;
+}
+
+#app-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: block;
 }
 
 .poem-title {

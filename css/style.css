@@ -70,6 +70,7 @@ button {
 }
 
 .hero {
+  width: 100vw;
   height: 100vh;
   min-height: 800px;
 }
@@ -100,7 +101,7 @@ button {
 }
 
 .tree img {
-  width: 550px;
+  width: 600px;
 }
 .window-stage {
   position: absolute;
@@ -482,7 +483,7 @@ button {
 .footer-content {
   position: relative;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 .site-footer {
