@@ -479,6 +479,12 @@ button {
   }
 }
 
+.footer-content {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 .site-footer {
   background-color: #000000;
   color: #f5f7fb;
@@ -489,21 +495,15 @@ button {
   padding-bottom: 40px;
   width: 100%;
   height: 300px;
-
-  display: flex;
 }
 
 .footer-text {
-  display: inline-block;
-  flex-direction: row-reverse;
-  position: relative;
   letter-spacing: 0.7em;
-  font-family: dnp-shuei-shogomincho-std, sans-serif;
+  font-family: shippori-mincho-b1, sans-serif;
   writing-mode: vertical-rl;
 }
 
 .main-link {
-  display: inline-block;
   position: absolute;
   top: 35px;
   right: 120px;
@@ -513,7 +513,6 @@ button {
 }
 
 .poemsite-link {
-  display: inline-block;
   position: absolute;
   top: 100px;
   right: 400px;

@@ -84,14 +84,8 @@
     <section class="june-poem">
       <canvas
         id="rainCanvas"
-        class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"
+        class="relative top-0 left-0 w-full h-full pointer-events-none z-0"
       ></canvas>
-
-      <!-- インタラクティブ波紋用コンテナ -->
-      <div
-        id="rippleContainer"
-        class="absolute top-0 left-0 w-full h-full pointer-events-none z-10 overflow-hidden"
-      ></div>
 
       <div class="june-text">
         <p class="june-1">
@@ -120,32 +114,34 @@
       <div class="poem-title">
         <h4>六月の雨　　　　　中原中也</h4>
       </div>
+      <script src="/js/june.js"></script>
     </section>
     　
 
-    <section class="m-0 p-0 h-full overflow-hidden">
-      <div class="ame-poem">
-        <div class="ame-text">
-          <p class="ame-1">雨のおとが　きこえる<br />雨がふっていたのだ</p>
-          <p class="ame-2">
-            あのおとのように<br />そっと世のためにはたらいていよう
-          </p>
-          <p class="ame-3">雨があがるように<br />しずかに死んでゆこう</p>
-        </div>
-        <div class="poem-title">
-          <h4>雨　　　　　　　　八木重吉</h4>
-        </div>
-      </div>
-      <!-- bodyの代わりにdivタグを使用 -->
-      <div id="app-container" class="text-white select-none">
+    <section class="ame-poem">
+      <div id="app-container">
         <!-- メインCanvas (Canvas 2D) - IDをame-canvasに変更 -->
         <canvas id="ame-canvas"></canvas>
-
-        <!-- UIオーバーレイ -->
-        <div
-          class="absolute inset-0 pointer-events-none z-10 flex flex-col justify-between p-6 md:p-8"
-        ></div>
       </div>
+      <div class="ame-text">
+        <p class="ame-1">雨のおとが　きこえる<br />雨がふっていたのだ</p>
+        <p class="ame-2">
+          あのおとのように<br />そっと世のためにはたらいていよう
+        </p>
+        <p class="ame-3">雨があがるように<br />しずかに死んでゆこう</p>
+      </div>
+      <div class="poem-title">
+        <h4>雨　　　　　　　　八木重吉</h4>
+      </div>
+
+      <!-- bodyの代わりにdivタグを使用 -->
+
+      <!-- UIオーバーレイ -->
+      <!-- <div 
+      class="absolute inset-0 pointer-events-none z-10 flex flex-col
+      justify-between p-6 md:p-8"
+      </div> -->
+
       <script src="/js/ame.js"></script>
     </section>
   </body>
