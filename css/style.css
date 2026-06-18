@@ -254,7 +254,7 @@ button {
 
 .concept-text {
   position: absolute;
-  margin-top: 10vh;
+  margin-top: 5vh;
   left: 50%;
   transform: translate(-50%, -50%);
   letter-spacing: 0.1em;
@@ -313,7 +313,7 @@ button {
 
 .window-shape2 {
   position: absolute;
-  top: 20vh;
+  top: 17vh;
   right: 20vw;
 }
 
@@ -326,7 +326,7 @@ button {
 .window-shape2 img {
   position: absolute;
   top: 0;
-  width: 9vw;
+  width: 8vw;
 }
 .poem-name {
   display: none;
@@ -382,7 +382,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  width: 15vw;
+  width: 17vw;
   transition: 0.3s ease;
 }
 
