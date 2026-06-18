@@ -71,7 +71,7 @@ button {
 
 .hero {
   width: 100vw;
-  height: 100vh;
+  height: 2000px;
   min-height: 800px;
 }
 
@@ -250,11 +250,12 @@ button {
   position: relative;
   width: 100%;
   height: 100%;
+  top: 10vh;
 }
 
 .concept-text {
   position: absolute;
-  top: 20svh;
+  top: 20vh;
   left: 50%;
   transform: translate(-50%, -50%);
   letter-spacing: 0.1em;
@@ -320,13 +321,13 @@ button {
 .window-shape1 img {
   position: absolute;
   top: 0;
-  height: 150px;
+  width: 10vw;
 }
 
 .window-shape2 img {
   position: absolute;
   top: 0;
-  height: 130px;
+  width: 11vw;
 }
 .poem-name {
   display: none;
@@ -336,14 +337,15 @@ button {
   display: inline-block;
   position: relative;
   width: 180px;
-  height: 290px;
+  width: 10vw;
 }
 
 .sky-poem-link img {
   position: absolute;
   top: 0;
   left: 0;
-  height: 290px;
+  width: 12vw;
+  min-width: 120px;
   transition: 0.3s ease;
 }
 
@@ -355,6 +357,7 @@ button {
   transform: translate(-50%, -50%);
   display: none;
   transition: 0.3s ease;
+  color: #ffffff;
 }
 
 .sky-poem-link:hover {
@@ -364,7 +367,7 @@ button {
   }
 
   .poem-image {
-    filter: brightness(110%);
+    filter: brightness(70%);
     transition: 0.3s ease;
   }
 }
@@ -372,15 +375,15 @@ button {
 .season-poem-link {
   display: inline-block;
   position: relative;
-  width: 230px;
-  height: 220px;
+  width: 10vw;
+  height: 15vh;
 }
 
 .season-poem-link img {
   position: absolute;
   top: 0;
   left: 0;
-  height: 225px;
+  width: 15vw;
   transition: 0.3s ease;
 }
 
@@ -392,6 +395,7 @@ button {
   transform: translate(-50%, -50%);
   display: none;
   transition: 0.3s ease;
+  color: #ffffff;
 }
 
 .season-poem-link:hover {
@@ -401,7 +405,7 @@ button {
   }
 
   .poem-image {
-    filter: brightness(105%);
+    filter: brightness(70%);
     transition: 0.3s ease;
   }
 }
@@ -429,6 +433,7 @@ button {
   transform: translate(-50%, -50%);
   display: none;
   transition: 0.3s ease;
+  color: #ffffff;
 }
 
 .plants-poem-link:hover {
@@ -438,7 +443,7 @@ button {
   }
 
   .poem-image {
-    filter: brightness(110%);
+    filter: brightness(70%);
     transition: 0.3s ease;
   }
 }
@@ -454,7 +459,8 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  height: 240px;
+  width: 20vw;
+  min-width: 150px;
   transition: 0.3s ease;
 }
 
@@ -466,6 +472,7 @@ button {
   transform: translate(-50%, -50%);
   display: none;
   transition: 0.3s ease;
+  color: #ffffff;
 }
 
 .water-poem-link:hover {
@@ -475,7 +482,7 @@ button {
   }
 
   .poem-image {
-    filter: brightness(110%);
+    filter: brightness(70%);
     transition: 0.3s ease;
   }
 }
