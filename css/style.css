@@ -236,7 +236,7 @@ button {
 
 .concept {
   /* min-height: -20vh; */
-  height: 500px;
+  height: 650px;
   display: grid;
   place-items: center;
   padding: 80px;
