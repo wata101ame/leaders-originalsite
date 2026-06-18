@@ -9,14 +9,8 @@
   </head>
   <body>
     <section class="spring-poem">
-      <div id="app">
-        <!-- メインCanvasのみのシンプルな構成 -->
-        <canvas
-          id="sakuraCanvas"
-          class="absolute inset-0 w-full h-full z-0"
-        ></canvas>
-      </div>
-      <div class="spring-poem">
+      <canvas id="sakuraCanvas"></canvas>
+      <div class="spring-content">
         <div class="spring-text">
           <p>
             綺麗な桜の花をみていると<br />
@@ -31,9 +25,7 @@
     </section>
 
     <section class="summer-poem">
-      <div>
-        <canvas id="canvas"></canvas>
-      </div>
+      <canvas id="summerCanvas"></canvas>
       <div class="summer-content">
         <div class="summer-text">
           <p class="summer-1">
@@ -63,42 +55,15 @@
           <h4>忘れもの　　　高田敏子</h4>
         </div>
       </div>
-    </section>
-
-    <section class="summer-poem">
-      <div class="summer-content">
-        <div class="summer-text">
-          <p class="summer-1">
-            入道雲にのって<br />
-            夏休みはいってしまった<br />
-            「サヨナラ」のかわりに<br />
-            素晴らしい夕立をふりまいて
-          </p>
-          <p class="summer-2">
-            けさ　空はまっさお<br />
-            木々の葉の一枚一枚が<br />
-            あたらしい光とあいさつをかわしている
-          </p>
-          <p class="summer-3">
-            だがキミ！　夏休みよ<br />
-            もう一度　もどってこないかな<br />
-            忘れものをとりにさ
-          </p>
-          <p class="summer-4">
-            迷まよい子のセミ<br />
-            さびしそうな麦わら帽子<br />
-            それから　ぼくの耳に<br />
-            くっついて離れない波の音
-          </p>
-        </div>
-        <div class="poem-title">
-          <h4>忘れもの　　　高田敏子</h4>
-        </div>
-      </div>
+      <script src="/js/summer.js"></script>
     </section>
 
     <section class="autumn-poem">
       <div class="autumn-content">
+        <canvas
+          id="autumnCanvas"
+          class="absolute inset-0 w-full h-full block z-0"
+        ></canvas>
         <div class="autumn-text">
           <p class="autumn-1">
             枯木をゆすりその朱き葉を落す <br />そのもとにわれはさりえず
@@ -117,9 +82,12 @@
           <h4>朱き葉　　　　　室生犀星</h4>
         </div>
       </div>
-      <!-- <script src="/js/spring.js"></script> -->
+      <script src="/js/autumn.js"></script>
     </section>
     <section class="winter-poem">
+      <!-- アニメーションキャンバス -->
+      <canvas id="winterCanvas"></canvas>
+
       <div class="winter-content">
         <div class="winter-text">
           <p class="winter-1">
@@ -128,7 +96,7 @@
           <p class="winter-2">
             下の雪<br />重かろな。<br />何百人ものせていて。
           </p>
-          <p class="winter-2">
+          <p class="winter-3">
             中の雪<br />さみしかろな。<br />空も地面もみえないで。
           </p>
         </div>
@@ -136,7 +104,7 @@
           <h4>積もった雪　　　金子みすゞ</h4>
         </div>
       </div>
-      <!-- <script src="/js/spring.js"></script> -->
+      <script src="/js/winter.js"></script>
     </section>
   </body>
 </html>

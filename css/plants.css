@@ -45,7 +45,7 @@
 .suisen-poem {
   width: 100vw;
   height: 100vh;
-  padding: 10vw;
+
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;

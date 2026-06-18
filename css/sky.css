@@ -7,7 +7,6 @@
 .clouds-poem {
   width: 100vw;
   height: 100vh;
-  padding: 10vw;
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
@@ -17,6 +16,7 @@
   position: absolute;
   right: 50%;
   transform: translate(50%, 0%);
+  padding-top: 40vh;
 }
 
 .clouds-1,
@@ -30,7 +30,6 @@
 .sun-poem {
   width: 100vw;
   height: 100vh;
-  padding: 100px;
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
@@ -38,6 +37,8 @@
 
 .sun-text {
   position: relative;
+  z-index: 20;
+  color: orange;
 }
 
 .sun-1 {
@@ -64,7 +65,7 @@
 .moon-poem {
   width: 100vw;
   height: 100vh;
-  padding: 100px;
+
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
@@ -72,7 +73,12 @@
 
 .moon-text {
   position: absolute;
-  right: 20%;
+  top: 10vh;
+  right: 20vw;
+  color: aliceblue;
+  .poem-title {
+    color: aliceblue;
+  }
 }
 
 .moon-1 {
@@ -89,6 +95,62 @@
   margin-right: 70px;
   margin-left: 70px;
   line-height: 2;
+}
+
+.sky-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #020208 0%,
+    #0a0a28 40%,
+    #1a153a 70%,
+    #2c1a4d 100%
+  );
+  background-size: 100% 200%;
+  animation: skyGradient 20s ease-in-out infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@keyframes skyGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.sky-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #020208 0%,
+    #0a0a28 40%,
+    #1a153a 70%,
+    #2c1a4d 100%
+  );
+  background-size: 100% 200%;
+  animation: skyGradient 20s ease-in-out infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@keyframes skyGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
 }
 
 .poem-title {

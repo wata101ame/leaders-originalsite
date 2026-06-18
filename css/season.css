@@ -6,6 +6,8 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100vw;
+  height: 100vh;
 }
 
 #app {
@@ -45,12 +47,11 @@ html {
 .summer-poem {
   width: 100vw;
   height: 100vh;
-  padding: 10vw;
+
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
   line-height: 2;
-  background: linear-gradient(#e3f2fd, #f9ffeb);
 }
 
 .summer-text {
@@ -63,6 +64,17 @@ html {
 .summer-3 {
   margin-right: 50px;
   margin-left: 50px;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  user-select: none;
 }
 
 .autumn-poem {
@@ -86,7 +98,7 @@ html {
 .winter-poem {
   width: 100vw;
   height: 100vh;
-  padding: 10vw;
+
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
@@ -105,6 +117,17 @@ html {
 .winter-3 {
   margin-right: 50px;
   margin-left: 50px;
+}
+
+#WinterCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  user-select: none;
 }
 
 .poem-title {

@@ -9,6 +9,8 @@
   </head>
   <body>
     <section class="clouds-poem">
+      <canvas id="cloudCanvas"></canvas>
+
       <div class="clouds-text">
         <p class="clouds-1">私は雲に<br />なりたいな。</p>
 
@@ -25,9 +27,10 @@
       <div class="poem-title">
         <h4>雲　　　　　　　金子みすゞ</h4>
       </div>
-      <!-- <script src="/js/spring.js"></script> -->
+      <script src="/js/cloud.js"></script>
     </section>
     <section class="sun-poem">
+      <canvas id="motionCanvas"></canvas>
       <div class="sun-text">
         <p class="sun-1">太陽をひとつふところへいれていたい</p>
         <p class="sun-2">
@@ -44,9 +47,28 @@
       <div class="poem-title">
         <h4>太陽　　　　　　　八木重吉</h4>
       </div>
-      <!-- <script src="/js/spring.js"></script> -->
+      <script src="/js/sun.js"></script>
     </section>
     <section class="moon-poem">
+      <div class="sky-container" id="sky">
+        <!-- 背景の星屑を描くためのキャンバス -->
+        <canvas id="starCanvas"></canvas>
+
+        <!-- 星雲・ゆらぎ -->
+        <div class="nebula"></div>
+
+        <!-- 流れる雲 -->
+        <div class="clouds">
+          <div class="cloud cloud-1"></div>
+          <div class="cloud cloud-2"></div>
+        </div>
+
+        <!-- 月のメインユニット（クレーターなし・左側に配置） -->
+        <div class="moon-wrapper">
+          <div class="moon-halo"></div>
+          <div class="moon"></div>
+        </div>
+      </div>
       <div class="moon-text">
         <p class="moon-1">
           ぬすつと犬めが、<br />

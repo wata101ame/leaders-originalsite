@@ -44,7 +44,9 @@ html {
   z-index: 2;
   line-height: 3;
   flex-direction: row-reverse;
-  padding: 100px;
+  padding-top: 100px;
+  padding-right: 100px;
+  padding-left: 100px;
 }
 
 .umi-paragraph-1 {
