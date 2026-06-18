@@ -236,7 +236,7 @@ button {
 
 .concept {
   /* min-height: -20vh; */
-  height: 1000px;
+  height: 900px;
   display: grid;
   place-items: center;
   padding: 80px;
@@ -254,7 +254,7 @@ button {
 
 .concept-text {
   position: absolute;
-  margin-top: 5vh;
+  margin-top: 10vh;
   left: 50%;
   transform: translate(-50%, -50%);
   letter-spacing: 0.1em;
