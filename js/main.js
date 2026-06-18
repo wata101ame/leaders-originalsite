@@ -13,7 +13,7 @@ function updateHeroMotion() {
   const progress = scrollable > 0 ? clamp(-heroRect.top / scrollable) : 0;
   const zoom = Math.pow(progress, 2);
   const bgProgress = clamp((progress - 0.68) / 0.32);
-  const scale = 1 + zoom * 6.2;
+  const scale = 1 + zoom * 8;
 
   root.style.setProperty("--zoom-progress", progress.toFixed(4));
   root.style.setProperty("--bg-progress", bgProgress.toFixed(4));
