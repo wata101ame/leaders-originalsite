@@ -234,8 +234,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   // 読み込み時にスタート
-  window.onload = function () {
-    initPetals();
-    animate();
-  };
+
+  initPetals();
+  animate();
 });

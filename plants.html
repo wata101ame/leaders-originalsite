@@ -6,6 +6,37 @@
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/plants.css" />
     <title>植物の詩</title>
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "fvq1xaj",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
   </head>
   <body>
     <section class="tulip-poem">
@@ -74,5 +105,42 @@
 
       <script src="/js/suisen.js"></script>
     </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-text">
+          <h3>詩と癒しの世界</h3>
+
+          <div class="main-link">
+            <div class="item">
+              <a href="index.html" class="site-link">はじめ</a>
+            </div>
+            <div class="item">
+              <a href="#concept" class="site-link">概要</a>
+            </div>
+            <div class="item poemsite-link-wrap">
+              <a href="#concept" class="site-link">詩</a>
+              <div class="poemsite-link">
+                <div class="item">
+                  <a href="season.html" class="site-link">四季の詩</a>
+                </div>
+                <div class="item">
+                  <a href="plants.html" class="site-link">植物の詩</a>
+                </div>
+                <div class="item">
+                  <a href="sky.html" class="site-link">空の詩</a>
+                </div>
+                <div class="item">
+                  <a href="water.html" class="site-link">水の詩</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <h4>© 2026 poetry world</h4>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

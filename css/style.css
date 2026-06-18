@@ -480,16 +480,9 @@ button {
   }
 }
 
-.footer-content {
-  position: relative;
-  top: 0;
-  right: 0;
-}
-
 .site-footer {
   background-color: #000000;
   color: #f5f7fb;
-  position: relative;
   padding-right: 80px;
   padding-left: 80px;
   padding-top: 40px;
@@ -502,37 +495,36 @@ button {
   letter-spacing: 0.7em;
   font-family: shippori-mincho-b1, sans-serif;
   writing-mode: vertical-rl;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .main-link {
-  position: absolute;
-  top: 35px;
-  right: 120px;
-  line-height: 8em;
   letter-spacing: 0.5em;
   font-family: shippori-mincho-b1, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.poemsite-link-wrap {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
 }
 
 .poemsite-link {
-  position: absolute;
-  top: 100px;
-  right: 400px;
-  line-height: 5em;
   letter-spacing: 0.5em;
 }
 
 .site-link {
   color: #f5f7fb;
+  padding-right: 4em;
   text-decoration: none;
+  display: inline-block;
 }
-
-.copy-light {
-  writing-mode: horizontal-tb;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
 @keyframes floatArrow {
   0%,
   100% {

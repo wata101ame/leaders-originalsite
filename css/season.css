@@ -2,6 +2,13 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  p {
+    font-family: shippori-mincho-b1, sans-serif;
+  }
+
+  h3 {
+    font-family: dnp-shuei-shogomincho-std, sans-serif;
+  }
 }
 
 html {
@@ -24,10 +31,10 @@ html {
 .spring-poem {
   writing-mode: vertical-rl;
   overflow: hidden;
-  padding: 100px;
+
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 10;
@@ -37,8 +44,12 @@ html {
   pointer-events: none;
 }
 
+.spring-content {
+  padding: 100px;
+}
 .spring-text {
   position: absolute;
+
   right: 50vw;
   transform: translate(50%, 0%);
   pointer-events: auto;
@@ -54,6 +65,10 @@ html {
   line-height: 2;
 }
 
+.summer-content {
+  padding: 100px;
+  color: #f9ffeb;
+}
 .summer-text {
   position: absolute;
   right: 35vw;
@@ -87,14 +102,30 @@ html {
   line-height: 2;
   background: linear-gradient(#f9ffeb, #fdc152);
 }
-
+.autumn-content {
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
 .autumn-1,
 .autumn-2,
 .autumn-3 {
   margin-right: 50px;
   margin-left: 50px;
 }
-
+.winter-content {
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
 .winter-poem {
   width: 100vw;
   height: 100vh;
@@ -135,4 +166,50 @@ html {
   left: 100px;
   bottom: 50px;
   pointer-events: auto;
+}
+
+.site-footer {
+  background-color: #000000;
+  color: #f5f7fb;
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  height: 300px;
+}
+
+.footer-text {
+  letter-spacing: 0.7em;
+  font-family: shippori-mincho-b1, sans-serif;
+  writing-mode: vertical-rl;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.main-link {
+  letter-spacing: 0.5em;
+  font-family: shippori-mincho-b1, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.poemsite-link-wrap {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.poemsite-link {
+  letter-spacing: 0.5em;
+}
+
+.site-link {
+  color: #f5f7fb;
+  padding-right: 4em;
+  text-decoration: none;
+  display: inline-block;
 }
