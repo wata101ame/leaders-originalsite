@@ -335,33 +335,30 @@ button {
 .sky-poem-link {
   display: inline-block;
   position: relative;
-  width: 12rem;
-  height: 20rem;
+  width: clamp(120px, 12vw, 12rem);
 }
 
 .sky-poem-link img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   transition: 0.3s ease;
 }
 
 .sky-poem-link p {
   position: absolute;
+  inset: 0;
   z-index: 10;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
+  display: grid;
+  place-items: center;
+  opacity: 0;
   transition: 0.3s ease;
   color: #ffffff;
 }
 
 .sky-poem-link:hover {
   .poem-name {
-    display: block;
+    opacity: 1;
     transition: 0.3s ease;
   }
 
@@ -374,33 +371,30 @@ button {
 .season-poem-link {
   display: inline-block;
   position: relative;
-  width: 15rem;
-  height: 15rem;
+  width: clamp(150px, 15vw, 15rem);
 }
 
 .season-poem-link img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   transition: 0.3s ease;
 }
 
 .season-poem-link p {
   position: absolute;
+  inset: 0;
   z-index: 10;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
+  display: grid;
+  place-items: center;
+  opacity: 0;
   transition: 0.3s ease;
   color: #ffffff;
 }
 
 .season-poem-link:hover {
   .poem-name {
-    display: block;
+    opacity: 1;
     transition: 0.3s ease;
   }
 
@@ -413,33 +407,30 @@ button {
 .plants-poem-link {
   display: inline-block;
   position: relative;
-  width: 15rem;
-  height: 20rem;
+  width: clamp(150px, 15vw, 15rem);
 }
 
 .plants-poem-link img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   transition: 0.3s ease;
 }
 
 .plants-poem-link p {
   position: absolute;
+  inset: 0;
   z-index: 10;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
+  display: grid;
+  place-items: center;
+  opacity: 0;
   transition: 0.3s ease;
   color: #ffffff;
 }
 
 .plants-poem-link:hover {
   .poem-name {
-    display: block;
+    opacity: 1;
     transition: 0.3s ease;
   }
 
@@ -452,33 +443,30 @@ button {
 .water-poem-link {
   display: inline-block;
   position: relative;
-  width: 15rem;
-  height: 15rem;
+  width: clamp(150px, 15vw, 15rem);
 }
 
 .water-poem-link img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   width: 100%;
-  width: 100%;
+  height: auto;
   transition: 0.3s ease;
 }
 
 .water-poem-link p {
   position: absolute;
+  inset: 0;
   z-index: 10;
-  top: 60%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  display: none;
+  display: grid;
+  place-items: center;
+  opacity: 0;
   transition: 0.3s ease;
   color: #ffffff;
 }
 
 .water-poem-link:hover {
   .poem-name {
-    display: block;
+    opacity: 1;
     transition: 0.3s ease;
   }
 
