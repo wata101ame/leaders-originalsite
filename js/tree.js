@@ -376,8 +376,6 @@ window.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("touchmove", handleMove, { passive: true });
   window.addEventListener("touchend", handleEnd, { passive: true });
 
-  window.onload = function () {
-    initLeaves();
-    animate();
-  };
+  initLeaves();
+  animate();
 });

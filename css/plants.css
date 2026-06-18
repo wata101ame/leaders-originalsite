@@ -6,7 +6,7 @@
     font-family: shippori-mincho-b1, sans-serif;
   }
 
-  h3 {
+  h4 {
     font-family: dnp-shuei-shogomincho-std, sans-serif;
   }
 }
@@ -14,50 +14,88 @@
 .tulip-poem {
   width: 100vw;
   height: 100vh;
-  padding: 10vw;
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
   line-height: 2;
   background-color: #b6e081;
+  font-size: 20px;
+}
+
+.tulip-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  z-index: 100;
+  height: 100vh;
 }
 
 .tulip-text {
-  position: absolute;
-  right: 30vw;
+  margin-left: 60vw;
 }
 
 .tree-poem {
   width: 100vw;
   height: 100vh;
-  padding: 10vw;
+
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
   line-height: 2;
   background: linear-gradient(#b6e081, #ffffff);
+  font-size: 20px;
+}
+.tree-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  z-index: 100;
+  height: 100vh;
+  line-height: 2;
 }
 
 .tree-1 {
-  position: absolute;
-  top: 60%;
-  right: 20vw;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-left: 20vw;
 }
-
 .tree-2 {
-  position: absolute;
-  right: 70vw;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-left: 10vw;
 }
 
 .suisen-poem {
   width: 100vw;
   height: 100vh;
-
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
   line-height: 2;
   background: linear-gradient(#ffffff, #ecf7ad);
+  font-size: 20px;
+}
+
+#suisenCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.suisen-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  z-index: 100;
+  height: 100vh;
+}
+
+.suisen-text {
+  margin-left: 30vw;
 }
 
 .suisen-1,

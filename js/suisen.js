@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   // --- Canvas初期セットアップ ---
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("suisenCanvas");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
 

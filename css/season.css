@@ -6,7 +6,7 @@
     font-family: shippori-mincho-b1, sans-serif;
   }
 
-  h3 {
+  h4 {
     font-family: dnp-shuei-shogomincho-std, sans-serif;
   }
 }
@@ -42,6 +42,7 @@ html {
   letter-spacing: 0.25rem;
   background-color: transparent;
   pointer-events: none;
+  font-size: 20px;
 }
 
 .spring-content {
@@ -58,7 +59,7 @@ html {
 .summer-poem {
   width: 100vw;
   height: 100vh;
-
+  font-size: 20px;
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
@@ -95,12 +96,12 @@ html {
 .autumn-poem {
   width: 100vw;
   height: 100vh;
-  padding: 10vw;
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
   line-height: 2;
   background: linear-gradient(#f9ffeb, #fdc152);
+  font-size: 20px;
 }
 .autumn-content {
   width: 100vw;
@@ -110,12 +111,17 @@ html {
   top: 0;
   left: 0;
   z-index: 100;
+  color: rgb(109, 60, 23);
+}
+
+.autumn-text {
+  margin-right: 30vw;
 }
 .autumn-1,
 .autumn-2,
 .autumn-3 {
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-right: 80px;
+  margin-left: 80px;
 }
 .winter-content {
   width: 100vw;
@@ -129,12 +135,13 @@ html {
 .winter-poem {
   width: 100vw;
   height: 100vh;
-
+  font-size: 20px;
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
   line-height: 2;
   background: linear-gradient(#f0debc, #ffffff);
+  color: #ababab;
 }
 
 .winter-text {
@@ -150,7 +157,7 @@ html {
   margin-left: 50px;
 }
 
-#WinterCanvas {
+#winterCanvas {
   position: absolute;
   top: 0;
   left: 0;

@@ -612,8 +612,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- スタート ---
-  window.onload = function () {
-    init();
-    animate();
-  };
+
+  init();
+  animate();
 });

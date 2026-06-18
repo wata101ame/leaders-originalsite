@@ -6,7 +6,7 @@
     font-family: shippori-mincho-b1, sans-serif;
   }
 
-  h3 {
+  h4 {
     font-family: dnp-shuei-shogomincho-std, sans-serif;
   }
 }
@@ -17,13 +17,14 @@
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
+  font-size: 20px;
 }
 
 .clouds-text {
   position: absolute;
   right: 50%;
   transform: translate(50%, 0%);
-  padding-top: 40vh;
+  padding-top: 20vh;
 }
 
 .clouds-1,
@@ -33,59 +34,51 @@
   margin-left: 50px;
   line-height: 2;
 }
-
+.sun-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  z-index: 100;
+  height: 100vh;
+  color: orange;
+}
 .sun-poem {
   width: 100vw;
   height: 100vh;
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
+  font-size: 20px;
 }
 
 .sun-text {
-  position: relative;
   z-index: 20;
-  color: orange;
+  margin-left: 15vw;
 }
 
-.sun-1 {
-  margin-right: 50px;
-  margin-left: 50px;
-  line-height: 2;
-}
-.sun-2 {
-  margin-right: 50px;
-  margin-left: 50px;
-  line-height: 2;
-  position: absolute;
-  right: 40vw;
-}
-
+.sun-1,
+.sun-2,
 .sun-3 {
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
   line-height: 2;
-  position: absolute;
-  right: 55vw;
 }
 
 .moon-poem {
   width: 100vw;
   height: 100vh;
-
+  color: aliceblue;
   writing-mode: vertical-rl;
   position: relative;
   letter-spacing: 0.25rem;
+  font-size: 20px;
 }
 
 .moon-text {
   position: absolute;
   top: 10vh;
   right: 20vw;
-  color: aliceblue;
-  .poem-title {
-    color: aliceblue;
-  }
 }
 
 .moon-1 {
@@ -164,4 +157,50 @@
   position: absolute;
   left: 100px;
   bottom: 50px;
+}
+
+.site-footer {
+  background-color: #000000;
+  color: #f5f7fb;
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  height: 300px;
+}
+
+.footer-text {
+  letter-spacing: 0.7em;
+  font-family: shippori-mincho-b1, sans-serif;
+  writing-mode: vertical-rl;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.main-link {
+  letter-spacing: 0.5em;
+  font-family: shippori-mincho-b1, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.poemsite-link-wrap {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.poemsite-link {
+  letter-spacing: 0.5em;
+}
+
+.site-link {
+  color: #f5f7fb;
+  padding-right: 4em;
+  text-decoration: none;
+  display: inline-block;
 }
