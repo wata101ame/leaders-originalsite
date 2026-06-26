@@ -2,13 +2,113 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  a,
   p {
     font-family: shippori-mincho-b1, sans-serif;
+    text-decoration: none;
   }
 
+  h1,
   h4 {
     font-family: dnp-shuei-shogomincho-std, sans-serif;
   }
+}
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* バツ印に変化するスタイル */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* メニューのスタイル */
+.menu {
+  writing-mode: vertical-rl;
+  position: fixed;
+  top: -120%; /* 初期状態でメニューを画面の外に */
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a3c2f;
+  padding: 20px;
+  z-index: 5;
+  transition: top 0.3s ease; /* スライドアニメーション */
+  h1 {
+    color: #fcfcfc;
+    font-size: 36px;
+    padding-top: 10vh;
+    padding-right: 8vw;
+    letter-spacing: 0.5em;
+  }
+}
+
+.list-item {
+  position: absolute;
+  top: 10vh;
+  right: 18vw;
+}
+
+.list-item a {
+  font-size: 30px;
+  color: #fcfcfc;
+  letter-spacing: 0.5em;
+}
+
+.list-item li {
+  padding: 50px;
+  list-style: none;
+}
+
+.poem-list {
+  position: absolute;
+  top: 25vh;
+  right: 48vw;
+}
+
+.poem-list a {
+  font-size: 24px;
+  color: #fcfcfc;
+  letter-spacing: 0.5em;
+}
+
+.poem-list li {
+  padding: 40px;
+  list-style: none;
+}
+
+/* メニューが表示される時 */
+.menu.open {
+  top: 0; /* メニューが表示される位置 */
+}
+
+.menu-button span {
+  display: block;
+  height: 3px;
+  background: var(--ink);
 }
 
 .clouds-poem {
@@ -39,7 +139,7 @@
   top: 0;
   left: 0;
   padding: 100px;
-  z-index: 100;
+  z-index: 4;
   height: 100vh;
   color: orange;
 }
@@ -53,7 +153,7 @@
 }
 
 .sun-text {
-  z-index: 20;
+  z-index: 4;
   margin-left: 15vw;
 }
 
